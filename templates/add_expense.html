@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add New Expense</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Date:</label>
+        <input type="date" class="form-control" name="date" required>
+    </div>
+    <div class="mb-3">
+        <label>Category:</label>
+        <input type="text" class="form-control" name="category" required>
+    </div>
+    <div class="mb-3">
+        <label>Amount:</label>
+        <input type="number" step="0.01" class="form-control" name="amount" required>
+    </div>
+    <div class="mb-3">
+        <label>Description:</label>
+        <input type="text" class="form-control" name="description">
+    </div>
+    <div class="mb-3">
+        <label>Payment Mode:</label>
+        <select class="form-control" name="payment_mode" required>
+            <option value="Cash">Cash</option>
+            <option value="UPI">UPI</option>
+            <option value="Card">Card</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Expense</button>
+</form>
+{% endblock %}
